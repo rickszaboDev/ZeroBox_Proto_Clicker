@@ -1,4 +1,4 @@
 ﻿public interface IDungeonController
 {
-    void StartRoom(DungeonController manager, RoomData data);
+    void StartRoom(RoomData data);
 }

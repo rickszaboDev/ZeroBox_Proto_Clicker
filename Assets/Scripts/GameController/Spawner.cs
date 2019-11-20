@@ -18,11 +18,12 @@ public class Spawner : MonoBehaviour
     [SerializeField] private List<GameObject> enemies;
 
     [Header("Settings")]
-    [SerializeField] private int maxEnemiesOnScreen;
+    [SerializeField] private List<int> maxEnemiesOnScreenList;
     [SerializeField] private int waveLength;
     [SerializeField] private int cooldown;
     private int enemiesAlive;
     private int waveCounter;
+    private int totalAmountOfEnemies = 0;
     public int EnemiesAlive 
     {
         get { return enemiesAlive; }
@@ -68,16 +69,27 @@ public class Spawner : MonoBehaviour
     public void StartSpawnEnemies(CombatRoomData data){
         StartCoroutine(SpawnEnemies(data));
     }
+
     public IEnumerator SpawnEnemies(CombatRoomData data)
     {
         enemies = data.EnemiesPool;
         waveLength = enemies.Count;
-        maxEnemiesOnScreen = data.maxEnemiesOnScreen;
+        maxEnemiesOnScreenList = data.maxEnemiesOnScreen;
         cooldown = data.cooldown;
         waveCounter = waveLength;
 
+        var maxEnemiesOnScreenCounter = 0; 
+        totalAmountOfEnemies = maxEnemiesOnScreenList[maxEnemiesOnScreenCounter];
+
         for (int i = 0; i < waveLength; i++)
         {
+            var maxEnemiesOnScreen = maxEnemiesOnScreenList[maxEnemiesOnScreenCounter];
+            
+            if(totalAmountOfEnemies <= 0) {
+                maxEnemiesOnScreenCounter++;
+                totalAmountOfEnemies = maxEnemiesOnScreenList[maxEnemiesOnScreenCounter];
+            }
+
             while (enemiesAlive >= maxEnemiesOnScreen)
             {
                 yield return null;
@@ -93,6 +105,7 @@ public class Spawner : MonoBehaviour
     private void SubtractAliveEnemie()
     {
         EnemiesAlive--;
+        if(totalAmountOfEnemies > 0) totalAmountOfEnemies--;
     }
 
     private Vector3 GetRandomPosition()

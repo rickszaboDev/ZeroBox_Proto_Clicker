@@ -10,8 +10,4 @@ public class CombatRoomController : RoomController, IDungeonController
     {
         StartCoroutine(spawner.SpawnEnemies(data as CombatRoomData));
     }
-    private void FinishRoom()
-    {
-        manager.SelectRoom();
-    }
 }

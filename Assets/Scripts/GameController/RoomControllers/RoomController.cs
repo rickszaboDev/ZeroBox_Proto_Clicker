@@ -5,7 +5,8 @@ using UnityEngine;
 public class RoomController : MonoBehaviour
 {
     protected RoomData CurrentRoomData;
-    protected DungeonController manager;
+    [SerializeField] protected DungeonController manager;
+
      private void OnEnable()
     {
         Spawner.OnClearAllEnemies += FinishRoom;
@@ -16,9 +17,8 @@ public class RoomController : MonoBehaviour
         Spawner.OnClearAllEnemies -= FinishRoom;
     }
 
-    public virtual void StartRoom(DungeonController manager, RoomData CurrentRoomData)
+    public void StartRoom(RoomData CurrentRoomData)
     {
-        this.manager = manager;
         this.CurrentRoomData = CurrentRoomData;
         CallHandler(this.CurrentRoomData);
     }

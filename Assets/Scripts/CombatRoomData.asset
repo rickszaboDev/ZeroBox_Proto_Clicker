@@ -17,8 +17,8 @@ MonoBehaviour:
   NavSouthRoom: {fileID: 0}
   NavEastRoom: {fileID: 0}
   NavWestRoom: {fileID: 0}
-  maxEnemiesOnScreen: 5
-  cooldown: 1
+  cooldown: 0
+  maxEnemiesOnScreen: 0200000003000000050000000a000000
   EnemiesPool:
   - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
   - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
@@ -29,4 +29,9 @@ MonoBehaviour:
   - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
   - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
   - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
+  - {fileID: 6802152745693488872, guid: 1ad37bdc58dcf0b4c94d16fcd35958ed, type: 3}
+  - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
+  - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
+  - {fileID: 4559474772493750061, guid: 0813c18b263bd744e8de131dcf5907c5, type: 3}
+  - {fileID: 6802152745693488872, guid: 1ad37bdc58dcf0b4c94d16fcd35958ed, type: 3}
   - {fileID: 6802152745693488872, guid: 1ad37bdc58dcf0b4c94d16fcd35958ed, type: 3}

@@ -109,7 +109,7 @@ public class DungeonController : MonoBehaviour
 
     private void StartRoom(RoomData data)
     {
-        roomControllers[(int)data.Type].StartRoom(this, data);
+        roomControllers[(int)data.Type].StartRoom(data);
         if(currentRoom != 1) onEnterRoom?.Invoke();
     }
 
