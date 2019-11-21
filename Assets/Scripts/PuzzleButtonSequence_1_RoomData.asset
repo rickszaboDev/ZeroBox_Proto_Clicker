@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: PuzzleButtonSequence_1_RoomData
+  m_EditorClassIdentifier: Assembly-CSharp::PuzzleRoomButtonSequenceData
+  Type: 1
+  NavNorthRoom: {fileID: 0}
+  NavSouthRoom: {fileID: 0}
+  NavEastRoom: {fileID: 0}
+  NavWestRoom: {fileID: 0}
+  cooldown: 0
+  timeToComplete: 0
+  randomSequence: 0
+  buttonSequence: 02000000000000000100000004000000030000000500000009000000070000000800000006000000
